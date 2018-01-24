@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.vaadin.addons</groupId>
 	<artifactId>vaadin-picture-viewer</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>vaadin-picture-viewer Add-on</name>
 
 	<properties>
@@ -22,11 +21,23 @@
 		<Vaadin-Addon>${artifactId}-${project.version}.jar</Vaadin-Addon>
 	</properties>
 	
+	
 	<organization>
 		<name>Kartik Suba (Direction Software Solutions)</name>
-		<url>https://github.com/direction/vaadin-picture-viewer</url>
+		<url>https://github.com/DirectionSS/vaadin-picture-viewer</url>
 	</organization>
+	
+	<scm>
+		<url>git://github.com/DirectionSS/vaadin-picture-viewer.git</url>
+		<connection>scm:git:git://github.com/DirectionSS/vaadin-picture-viewer.git</connection>
+		<developerConnection>scm:git:https://github.com/DirectionSS/vaadin-picture-viewer.git</developerConnection>
+	  	<tag>vaadin-picture-viewer-root-1.0</tag>
+  	</scm>
 
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/DirectionSS/vaadin-picture-viewer/issues</url>
+	</issueManagement>
     <!--    
 	<scm>
 		<url>git://github.com/mygithubaccount/MyComponent.git</url>
