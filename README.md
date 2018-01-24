@@ -2,7 +2,7 @@
 
 vaadin-picture-viewer is a utility add-on for Vaadin 7. A component that helps in advanced picture/image viewing.
 
-##Who developed it?
+## Who developed it?
 
 Kartik Suba @ Direction Software Solutions, India. Contact on Skype @ k.suba@direction.biz or kartik.suba for quick assistance.
 
