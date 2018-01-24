@@ -24,7 +24,7 @@ To be deployed.
 <dependency>
     <groupId>org.vaadin.addons</groupId>
 	<artifactId>vaadin-picture-viewer</artifactId>
-	<version>1.0.0</version>
+	<version>1.0</version>
 </dependency>
 
 <repository>
