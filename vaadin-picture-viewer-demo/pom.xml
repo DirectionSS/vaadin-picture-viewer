@@ -4,7 +4,7 @@
 	<groupId>org.vaadin.addons</groupId>
 	<artifactId>vaadin-picture-viewer-demo</artifactId>
 	<packaging>war</packaging>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.1-SNAPSHOT</version>
 	<name>vaadin-picture-viewer Add-on Demo</name>
 
 	<properties>

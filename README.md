@@ -1,10 +1,39 @@
-# MyComponent Add-on for Vaadin 7
+# vaadin-picture-viewer for Vaadin 7
 
-MyComponent is an UI component add-on for Vaadin 7.
+vaadin-picture-viewer is a utility add-on for Vaadin 7. A component that helps in advanced picture/image viewing.
+
+## What dependencies are required?
+JDK 1.7 or above
+
+## Features
+
+### Zoom on Mouse Roll
+### Zoom with specified percentage
+### Zoom using a magnifier (zooms at a constant rate. For Eg: +10)
+### Rotate Left
+### Rotate Right
 
 ## Online demo
+To be deployed.
 
-Try the add-on demo at <url of the online demo>
+## Usage
+
+### Maven
+
+```xml
+<dependency>
+    <groupId>org.vaadin.addons</groupId>
+	<artifactId>vaadin-picture-viewer</artifactId>
+	<version>1.0.0</version>
+</dependency>
+
+<repository>
+   <id>vaadin-addons</id>
+   <url>http://maven.vaadin.com/vaadin-addons</url>
+</repository>
+```
+
+No widgetset required.
 
 ## Download release
 
@@ -12,7 +41,7 @@ Official releases of this add-on are available at Vaadin Directory. For Maven in
 
 ## Building and running demo
 
-git clone <url of the MyComponent repository>
+git clone https://github.com/bonprix/vaadin-picture-viewer
 mvn clean install
 cd demo
 mvn jetty:run
@@ -44,22 +73,18 @@ To debug project and make code modifications on the fly in the server-side, righ
 
 ### Debugging client-side
 
-The most common way of debugging and making changes to the client-side code is dev-mode. To create debug configuration for it, open vaadin-picture-viewer-demo project properties and click "Create Development Mode Launch" button on the Vaadin tab. Right-click newly added "GWT development mode for vaadin-picture-viewer-demo.launch" and choose Debug As > Debug Configurations... Open up Classpath tab for the development mode configuration and choose User Entries. Click Advanced... and select Add Folders. Choose Java and Resources under vaadin-picture-viewer/src/main and click ok. Now you are ready to start debugging the client-side code by clicking debug. Click Launch Default Browser button in the GWT Development Mode in the launched application. Now you can modify and breakpoints to client-side classes and see changes by reloading the web page. 
-
-Another way of debugging client-side is superdev mode. To enable it, uncomment devModeRedirectEnabled line from the end of DemoWidgetSet.gwt.xml located under vaadin-picture-viewer-demo resources folder and compile the widgetset once by running vaadin:compile Maven target for vaadin-picture-viewer-demo. Refresh vaadin-picture-viewer-demo project resources by right clicking the project and choosing Refresh. Click "Create SuperDevMode Launch" button on the Vaadin tab of the vaadin-picture-viewer-demo project properties panel to create superder mode code server launch configuration and modify the class path as instructed above. After starting the code server by running SuperDevMode launch as Java application, you can navigate to http://localhost:8080/vaadin-picture-viewer-demo/?superdevmode. Now all code changes you do to your client side will get compiled as soon as you reload the web page. You can also access Java-sources and set breakpoints inside Chrome if you enable source maps from inspector settings. 
-
+Debugging client side code in the vaadin-picture-viewer-demo project:
+  - run "mvn vaadin:run-codeserver" on a separate console while the application is running
+  - activate Super Dev Mode in the debug window of the application or by adding ?superdevmode to the URL
+  - You can access Java-sources and set breakpoints inside Chrome if you enable source maps from inspector settings.
  
 ## Release notes
 
-### Version 1.0-SNAPSHOT
-- ...
-- ...
+
+### Version 1.0.0
+- Initial release
 
 ## Roadmap
-
-This component is developed as a hobby with no public roadmap or any guarantees of upcoming releases. That said, the following features are planned for upcoming releases:
-- ...
-- ...
 
 ## Issue tracking
 
@@ -79,7 +104,7 @@ Contributions are welcome, but there are no guarantees that they are accepted as
 
 Add-on is distributed under Apache License 2.0. For license terms, see LICENSE.txt.
 
-MyComponent is written by <...>
+vaadin-picture-viewer is written by Kartik Suba @ Direction Software Solutions, India.
 
 # Developer Guide
 
@@ -87,24 +112,17 @@ MyComponent is written by <...>
 
 Here is a simple example on how to try out the add-on component:
 
-<...>
+```java
+ 		// Initialize our new UI component
+        final PictureViewer pictureViewer = new PictureViewer(new ThemeResource("images/noddy.jpg"));
+
+        // Show it in the middle of the screen
+        final VerticalLayout layout = new VerticalLayout();
+        layout.setStyleName("demoContentLayout");
+        layout.setSizeFull();
+        layout.addComponent(pictureViewer);
+        layout.setComponentAlignment(pictureViewer, Alignment.MIDDLE_CENTER);
+        setContent(layout);
+```
 
 For a more comprehensive example, see src/test/java/org/vaadin/template/demo/DemoUI.java
-
-## Features
-
-### Feature A
-
-<...>
-
-### Feature B
-
-<...>
-
-### Feature C
-
-<...>
-
-## API
-
-MyComponent JavaDoc is available online at <...>
